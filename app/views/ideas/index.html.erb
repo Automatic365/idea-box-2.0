@@ -1,9 +1,10 @@
-
-
 <% @ideas.each do |idea| %>
-<%= idea.title %><br>
-<%= idea.body %><br>
-<%= idea.quality %><br>
+  <ul id="each-idea">
+      <h2><%= idea.title %></h2>
+      <li><%= idea.body %></li>
+      <li><%= idea.quality %></li>
+      <li><button type="button">Update</button></li>
+  </ul>
 <% end %>
 
 <h1>Have Another Idea?</h1>
@@ -16,4 +17,3 @@
       <input type="submit" value="Save" id="create-idea">
     </form>
   </div>
-  
