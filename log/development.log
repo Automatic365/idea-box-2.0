@@ -1342,3 +1342,60 @@ Completed 200 OK in 41ms (Views: 0.9ms | ActiveRecord: 31.6ms)
 Completed 200 OK in 153ms (Views: 143.6ms | ActiveRecord: 5.8ms)
 
 
+Started GET "/?title=Demo+card&body=stuff" for ::1 at 2016-10-05 16:43:44 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by IdeasController#index as HTML
+  Parameters: {"title"=>"Demo card", "body"=>"stuff"}
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (1.5ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY "ideas"."created_at" DESC[0m
+  Rendered ideas/index.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 578ms (Views: 544.2ms | ActiveRecord: 16.4ms)
+
+
+Started GET "/?title=Demo+card&body=stuff" for ::1 at 2016-10-05 16:53:42 -0600
+Processing by IdeasController#index as HTML
+  Parameters: {"title"=>"Demo card", "body"=>"stuff"}
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (1.0ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY "ideas"."created_at" DESC[0m
+  Rendered ideas/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 239ms (Views: 230.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/?title=Demo+card&body=stuff" for ::1 at 2016-10-05 16:56:00 -0600
+Processing by IdeasController#index as HTML
+  Parameters: {"title"=>"Demo card", "body"=>"stuff"}
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.5ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY "ideas"."created_at" DESC[0m
+  Rendered ideas/index.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 59ms (Views: 43.1ms | ActiveRecord: 7.1ms)
+
+
+Started DELETE "/api/v1/ideas/5" for ::1 at 2016-10-05 16:56:05 -0600
+Processing by Api::V1::IdeasController#destroy as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mIdea Load (3.7ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.6ms)[0m  [1m[31mDELETE FROM "ideas" WHERE "ideas"."id" = $1[0m  [["id", 5]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 12565ms (Views: 0.8ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/?title=Demo+card&body=stuff" for ::1 at 2016-10-05 16:56:31 -0600
+Processing by IdeasController#index as HTML
+  Parameters: {"title"=>"Demo card", "body"=>"stuff"}
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.7ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY "ideas"."created_at" DESC[0m
+  Rendered ideas/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 41ms (Views: 34.2ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/api/v1/ideas/6" for ::1 at 2016-10-05 16:56:39 -0600
+Processing by Api::V1::IdeasController#destroy as JSON
+  Parameters: {"id"=>"6"}
+  [1m[36mIdea Load (2.7ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "ideas" WHERE "ideas"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 11ms (Views: 1.0ms | ActiveRecord: 4.1ms)
+
+
