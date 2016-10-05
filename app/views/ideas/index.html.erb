@@ -1,1 +1,19 @@
-<h1>Welcome to IdeaBox...again!</h1>
+
+
+<% @ideas.each do |idea| %>
+<%= idea.title %><br>
+<%= idea.body %><br>
+<%= idea.quality %><br>
+<% end %>
+
+<h1>Have Another Idea?</h1>
+  <div class="form">
+    <form>
+      Title:<br>
+      <input type="text" name="title" id="idea-title"><br>
+      Body:<br>
+      <input type="text" name="body" id="idea-body"><br><br>
+      <input type="submit" value="Save" id="create-idea">
+    </form>
+  </div>
+  
