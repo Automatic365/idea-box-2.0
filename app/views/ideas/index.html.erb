@@ -1,11 +1,25 @@
-<% @ideas.each do |idea| %>
-  <ul id="each-idea">
-      <h2><%= idea.title %></h2>
-      <li><%= idea.body %></li>
-      <li><%= idea.quality %></li>
-      <li><button type="button">Update</button></li>
-  </ul>
-<% end %>
+<table style="width:100%">
+  <tr>
+    <th><u>Title</u></th>
+    <th><u>Body</u></th>
+    <th><u>Quality</u></th>
+    <th><u>Voting</u></th>
+    <th><u>Delete This Idea</u></th>
+  </tr>
+
+  <tbody id="all-ideas">
+
+    <% @ideas.each do |idea| %>
+    <tr data-id='<%= idea.id %>' class='idea'>
+      <td contenteditable="true" class="title-text"><%= idea.title %></td>
+      <td contenteditable="true" class="body-text"><%= idea.body %></td>
+      <td class="quality-text"><%= idea.quality %></td>
+      <td><input type="button" class="upvote-idea" value="Thumbs Up"><input type="button" class="downvote-idea" value="Thumbs Down"></td>
+      <td><input type="button" value="Delete" class="destroy-idea"></td>
+    </tr>
+    <% end %>
+</tbody>
+</table>
 
 <h1>Have Another Idea?</h1>
   <div class="form">
