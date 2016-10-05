@@ -1314,3 +1314,31 @@ Processing by IdeasController#index as HTML
 Completed 200 OK in 54ms (Views: 45.8ms | ActiveRecord: 3.3ms)
 
 
+  [1m[36mIdea Load (2.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+Started GET "/?title=Butt&body=stuff" for ::1 at 2016-10-05 16:17:12 -0600
+Processing by IdeasController#index as HTML
+  Parameters: {"title"=>"Butt", "body"=>"stuff"}
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (11.9ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY "ideas"."created_at" DESC[0m
+  Rendered ideas/index.html.erb within layouts/application (34.1ms)
+Completed 200 OK in 236ms (Views: 204.4ms | ActiveRecord: 11.9ms)
+
+
+Started POST "/api/v1/ideas" for ::1 at 2016-10-05 16:17:33 -0600
+Processing by Api::V1::IdeasController#create as JSON
+  Parameters: {"idea"=>{"title"=>"test again", "body"=>"456"}}
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+Started GET "/?title=test+again&body=456" for ::1 at 2016-10-05 16:17:33 -0600
+Processing by IdeasController#index as HTML
+  Parameters: {"title"=>"test again", "body"=>"456"}
+  [1m[35mSQL (28.3ms)[0m  [1m[32mINSERT INTO "ideas" ("title", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "test again"], ["body", "456"], ["created_at", 2016-10-05 22:17:33 UTC], ["updated_at", 2016-10-05 22:17:33 UTC]]
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 41ms (Views: 0.9ms | ActiveRecord: 31.6ms)
+
+
+  [1m[36mIdea Load (5.8ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY "ideas"."created_at" DESC[0m
+  Rendered ideas/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 153ms (Views: 143.6ms | ActiveRecord: 5.8ms)
+
+

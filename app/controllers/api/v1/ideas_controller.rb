@@ -1,4 +1,4 @@
-class Api::V1::IdeasController < ApplicationController  # ~> NameError: uninitialized constant Api
+class Api::V1::IdeasController < ApplicationController
 
   def index
     render json: Idea.all
@@ -15,8 +15,3 @@ class Api::V1::IdeasController < ApplicationController  # ~> NameError: uninitia
   end
 
 end
-
-# ~> NameError
-# ~> uninitialized constant Api
-# ~>
-# ~> /Users/Automatic365/turing/1605/mod_4/projects/ideabox_2.0/app/controllers/api/v1/ideas_controller.rb:1:in `<main>'
