@@ -12,10 +12,15 @@ class Api::V1::IdeasController < ApplicationController
     render json: Idea.destroy(params[:id])
   end
 
+  def update
+    idea = Idea.find(idea_params[:id])
+    render json: idea
+  end
+  
   private
 
   def idea_params
-    params.require(:idea).permit(:title, :body, :quality)
+    params.require(:idea).permit(:id, :title, :body, :quality)
   end
 
 end
