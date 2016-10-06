@@ -2447,3 +2447,148 @@ Processing by Api::V1::IdeasController#update as JSON
 Completed 200 OK in 7ms (Views: 1.4ms | ActiveRecord: 2.9ms)
 
 
+Started GET "/?title=Kristaps&body=Porzingis" for ::1 at 2016-10-05 21:27:53 -0600
+Processing by IdeasController#index as HTML
+  Parameters: {"title"=>"Kristaps", "body"=>"Porzingis"}
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (1.0ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY "ideas"."created_at" DESC[0m
+  Rendered ideas/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 120ms (Views: 109.7ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/api/v1/ideas/10" for ::1 at 2016-10-05 21:28:01 -0600
+Processing by Api::V1::IdeasController#update as JSON
+  Parameters: {"idea"=>{"id"=>"10", "quality"=>"plausible"}, "id"=>"10"}
+  [1m[36mIdea Load (1.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 7ms (Views: 1.4ms | ActiveRecord: 1.2ms)
+
+
+Started PUT "/api/v1/ideas/11" for ::1 at 2016-10-05 21:28:03 -0600
+Processing by Api::V1::IdeasController#update as JSON
+  Parameters: {"idea"=>{"id"=>"11", "quality"=>"plausible"}, "id"=>"11"}
+  [1m[36mIdea Load (0.5ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.5ms)
+
+
+Started PUT "/api/v1/ideas/11" for ::1 at 2016-10-05 21:28:04 -0600
+Processing by Api::V1::IdeasController#update as JSON
+  Parameters: {"idea"=>{"id"=>"11", "quality"=>"genius"}, "id"=>"11"}
+  [1m[36mIdea Load (7.4ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+Completed 200 OK in 11ms (Views: 0.5ms | ActiveRecord: 7.4ms)
+
+
+Started PUT "/api/v1/ideas/4" for ::1 at 2016-10-05 21:29:46 -0600
+Processing by Api::V1::IdeasController#update as JSON
+  Parameters: {"idea"=>{"id"=>"4", "quality"=>"plausible"}, "id"=>"4"}
+  [1m[36mIdea Load (1.4ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 1.4ms)
+
+
+Started PUT "/api/v1/ideas/4" for ::1 at 2016-10-05 21:29:46 -0600
+Processing by Api::V1::IdeasController#update as JSON
+  Parameters: {"idea"=>{"id"=>"4", "quality"=>"genius"}, "id"=>"4"}
+  [1m[36mIdea Load (1.8ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 1.8ms)
+
+
+Started PUT "/api/v1/ideas/4" for ::1 at 2016-10-05 21:29:47 -0600
+Processing by Api::V1::IdeasController#update as JSON
+  Parameters: {"idea"=>{"id"=>"4", "quality"=>"plausible"}, "id"=>"4"}
+  [1m[36mIdea Load (1.7ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 1.7ms)
+
+
+Started PUT "/api/v1/ideas/4" for ::1 at 2016-10-05 21:29:48 -0600
+Processing by Api::V1::IdeasController#update as JSON
+  Parameters: {"idea"=>{"id"=>"4", "quality"=>"swill"}, "id"=>"4"}
+  [1m[36mIdea Load (0.4ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/?title=Kristaps&body=Porzingis" for ::1 at 2016-10-05 21:30:22 -0600
+Processing by IdeasController#index as HTML
+  Parameters: {"title"=>"Kristaps", "body"=>"Porzingis"}
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (13.5ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY "ideas"."created_at" DESC[0m
+  Rendered ideas/index.html.erb within layouts/application (57.9ms)
+Completed 200 OK in 209ms (Views: 179.8ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/?title=Kristaps&body=Porzingis" for ::1 at 2016-10-05 21:32:49 -0600
+Processing by IdeasController#index as HTML
+  Parameters: {"title"=>"Kristaps", "body"=>"Porzingis"}
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (3.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY "ideas"."created_at" DESC[0m
+  Rendered ideas/index.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 113ms (Views: 103.0ms | ActiveRecord: 3.2ms)
+
+
+Started PUT "/api/v1/ideas/3" for ::1 at 2016-10-05 21:33:06 -0600
+Processing by Api::V1::IdeasController#update as JSON
+  Parameters: {"idea"=>{"id"=>"3", "quality"=>"plausible"}, "id"=>"3"}
+  [1m[36mIdea Load (0.3ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 10ms (Views: 2.5ms | ActiveRecord: 2.1ms)
+
+
+Started PUT "/api/v1/ideas/3" for ::1 at 2016-10-05 21:33:06 -0600
+Processing by Api::V1::IdeasController#update as JSON
+  Parameters: {"idea"=>{"id"=>"3", "quality"=>"swill"}, "id"=>"3"}
+  [1m[36mIdea Load (0.4ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-10-05 21:39:12 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (1.3ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY "ideas"."created_at" DESC[0m
+  Rendered ideas/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 416ms (Views: 402.8ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/" for ::1 at 2016-10-05 21:40:17 -0600
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.9ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY "ideas"."created_at" DESC[0m
+  Rendered ideas/index.html.erb within layouts/application (101.2ms)
+Completed 200 OK in 163ms (Views: 146.0ms | ActiveRecord: 6.7ms)
+
+
+Started PUT "/api/v1/ideas/11" for ::1 at 2016-10-05 21:40:22 -0600
+Processing by Api::V1::IdeasController#update as JSON
+  Parameters: {"idea"=>{"id"=>"11", "quality"=>"plausible"}, "id"=>"11"}
+  [1m[36mIdea Load (0.9ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "ideas" SET "quality" = $1, "updated_at" = $2 WHERE "ideas"."id" = $3[0m  [["quality", 1], ["updated_at", 2016-10-06 03:40:22 UTC], ["id", 11]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 27ms (Views: 0.9ms | ActiveRecord: 2.6ms)
+
+
+Started PUT "/api/v1/ideas/11" for ::1 at 2016-10-05 21:40:23 -0600
+Processing by Api::V1::IdeasController#update as JSON
+  Parameters: {"idea"=>{"id"=>"11", "quality"=>"genius"}, "id"=>"11"}
+  [1m[36mIdea Load (0.9ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "ideas" SET "quality" = $1, "updated_at" = $2 WHERE "ideas"."id" = $3[0m  [["quality", 2], ["updated_at", 2016-10-06 03:40:23 UTC], ["id", 11]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2016-10-05 21:40:24 -0600
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (1.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY "ideas"."created_at" DESC[0m
+  Rendered ideas/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 37ms (Views: 33.5ms | ActiveRecord: 1.2ms)
+
+
+Started PUT "/api/v1/ideas/11" for ::1 at 2016-10-05 21:40:45 -0600
+Processing by Api::V1::IdeasController#update as JSON
+  Parameters: {"idea"=>{"id"=>"11", "quality"=>"plausible"}, "id"=>"11"}
+  [1m[36mIdea Load (0.4ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[33mUPDATE "ideas" SET "quality" = $1, "updated_at" = $2 WHERE "ideas"."id" = $3[0m  [["quality", 1], ["updated_at", 2016-10-06 03:40:45 UTC], ["id", 11]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 3.4ms)
+
+
