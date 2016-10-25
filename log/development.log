@@ -2592,3 +2592,68 @@ Processing by Api::V1::IdeasController#update as JSON
 Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 3.4ms)
 
 
+Started GET "/" for ::1 at 2016-10-25 07:18:18 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (3.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY "ideas"."created_at" DESC[0m
+  Rendered ideas/index.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 518ms (Views: 499.4ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/?title=Test&body=testers" for ::1 at 2016-10-25 07:18:39 -0600
+Processing by IdeasController#index as HTML
+  Parameters: {"title"=>"Test", "body"=>"testers"}
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (1.3ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY "ideas"."created_at" DESC[0m
+  Rendered ideas/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 35ms (Views: 31.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/?title=Test&body=testers" for ::1 at 2016-10-25 07:19:17 -0600
+Processing by IdeasController#index as HTML
+  Parameters: {"title"=>"Test", "body"=>"testers"}
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (1.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY "ideas"."created_at" DESC[0m
+  Rendered ideas/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 120ms (Views: 117.3ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/api/v1/ideas" for ::1 at 2016-10-25 07:19:27 -0600
+Processing by Api::V1::IdeasController#create as JSON
+  Parameters: {"idea"=>{"title"=>"Test", "body"=>"stuff"}}
+Started GET "/?title=Test&body=stuff" for ::1 at 2016-10-25 07:19:27 -0600
+Processing by IdeasController#index as HTML
+  [1m[35m (1.6ms)[0m  [1m[35mBEGIN[0m
+  Parameters: {"title"=>"Test", "body"=>"stuff"}
+  [1m[35mSQL (8.7ms)[0m  [1m[32mINSERT INTO "ideas" ("title", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Test"], ["body", "stuff"], ["created_at", 2016-10-25 13:19:27 UTC], ["updated_at", 2016-10-25 13:19:27 UTC]]
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 25ms (Views: 0.8ms | ActiveRecord: 11.4ms)
+
+
+  [1m[36mIdea Load (1.5ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY "ideas"."created_at" DESC[0m
+  Rendered ideas/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 35ms (Views: 31.5ms | ActiveRecord: 1.5ms)
+
+
+Started PUT "/api/v1/ideas/12" for ::1 at 2016-10-25 07:19:32 -0600
+Processing by Api::V1::IdeasController#update as JSON
+  Parameters: {"idea"=>{"id"=>"12", "quality"=>"plausible"}, "id"=>"12"}
+  [1m[36mIdea Load (0.8ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[33mUPDATE "ideas" SET "quality" = $1, "updated_at" = $2 WHERE "ideas"."id" = $3[0m  [["quality", 1], ["updated_at", 2016-10-25 13:19:32 UTC], ["id", 12]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 16ms (Views: 0.6ms | ActiveRecord: 3.4ms)
+
+
+Started PUT "/api/v1/ideas/12" for ::1 at 2016-10-25 07:19:34 -0600
+Processing by Api::V1::IdeasController#update as JSON
+  Parameters: {"idea"=>{"id"=>"12", "quality"=>"swill"}, "id"=>"12"}
+  [1m[36mIdea Load (0.3ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "ideas" SET "quality" = $1, "updated_at" = $2 WHERE "ideas"."id" = $3[0m  [["quality", 0], ["updated_at", 2016-10-25 13:19:34 UTC], ["id", 12]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 2.8ms)
+
+
