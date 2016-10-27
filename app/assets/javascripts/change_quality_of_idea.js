@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
   var ideaQuality = ['swill', 'plausible', 'genius']
 
   $("#all-ideas").on('blur', ".title-text" ,function(){
