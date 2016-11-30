@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/Automatic365/idea-box-2.0/badges/gpa.svg)](https://codeclimate.com/github/Automatic365/idea-box-2.0)
+
 # Idea Box
 
 **Live Demo: https://idea-box-2-the-reckoning.herokuapp.com/**
